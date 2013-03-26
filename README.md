@@ -20,6 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
+### Date/Time Setters
+
 Define some date_time_formats:
 
 config/initializers/date_time_formats.rb
@@ -97,6 +99,15 @@ date_attr_writer :date_of_birth, :format => '%m-%d-%Y'
 date_attr_writer :date_of_birth, :format => Date::DATE_FORMATS[:isdn]
 ```
 
+### Date/Time Format Import
+
+In an initializer file:
+
+```ruby
+Goodtimes::DateTimeFormats.import # to import all formats
+
+Goodtimes::DateTimeFormats.import :isdn, :timestamp, :timestamp_long # to import 3 specific formats formats
+```
 
 ## Contributing
 
